@@ -1,26 +1,23 @@
-%h1 Check out all these pets!
-%table
-  %tr.table-headers
-    %td Name
-    %td Type
-    %td Breed
-    %td Location
-    %td Latitude
-    %td Longitude
-    %td See More
-  - @pets.each do |pet|
-    %tr
-      %td
-        = pet["name"]
-      %td
-        = pet["species"]
-      %td
-        = pet["breed"]
-      %td
-        = pet["location"]
-      %td
-        = pet["latitude"]
-      %td
-        = pet["longitude"]
-      %td
-        = link_to 'See More', pet_path(pet["id"])
+.pet-index-container
+  .header-container
+    %h1 Does my pet need an umbrella?
+  .table-container
+    %table
+      %tr.table-headers
+        %td Name
+        %td Type
+        %td Breed
+        %td Location
+      - @pets.each do |pet|
+        %tr.pet-row
+          %td
+            = pet["name"]
+          %td
+            = pet["species"]
+          %td
+            = pet["breed"]
+          %td
+            = pet["location"]
+          %td
+            %form{method: 'GET', action: pet_path(pet["id"])}
+              %input{type: 'submit', value: 'Umbrella?', class: 'umbrella-button'}
