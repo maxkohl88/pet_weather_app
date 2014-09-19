@@ -47,6 +47,8 @@ gem 'dotenv-deployment'
 # postgresql gem for production on heroku
 gem 'pg'
 
+gem 'rails_12factor'
+
 end
 
 # Use ActiveModel has_secure_password
