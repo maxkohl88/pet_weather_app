@@ -9,6 +9,9 @@ class PetsController < ApplicationController
     pet_id = params[:id]
     response = Unirest.get "http://maxk-pet-api.herokuapp.com/pets/#{pet_id}"
     @pet = response.body
+
+    weather_response = Unirest.get "https://api.forecast.io/forecast/#{ENV["FORECAST_KEY"]}/#{@pet["latitude"]},#{@pet["longitude"]}"
+    binding.pry
   end
 
 end
