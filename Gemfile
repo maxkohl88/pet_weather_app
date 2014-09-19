@@ -32,8 +32,11 @@ gem 'haml-rails'
 # unirest gem for making REST requests to Pet API
 gem 'unirest'
 
-#json gem for easy ruby handling of json objects
+# json gem for easy ruby handling of json objects
 gem 'json'
+
+# pry gem for irb debugging
+gem 'pry'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
