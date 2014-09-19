@@ -1,0 +1,13 @@
+.pet-show-container
+  %h2 
+    Hello human, my name is
+    = @pet["name"]
+  .description
+    I am a
+    = @pet["species"]
+    of the
+    = @pet["breed"]
+    clan. I live in
+    = @pet["location"]
+  .pet-image
+    =image_tag @pet["image_url"]
