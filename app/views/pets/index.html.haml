@@ -1,0 +1,9 @@
+%h1 Check out all these pets!
+%table
+- @pets.each do |pet|
+  %tr
+    = pet["name"]
+  %tr
+    = pet["species"]
+  %tr
+    = pet["breed"]
