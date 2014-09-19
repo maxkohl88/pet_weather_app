@@ -38,6 +38,12 @@ gem 'json'
 # pry gem for irb debugging
 gem 'pry'
 
+# .env gem for storing api keys in development
+gem 'dotenv-rails', :groups => [:development, :test]
+
+# .env gem for storing api keys in production
+gem 'dotenv-deployment', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
