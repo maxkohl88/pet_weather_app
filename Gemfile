@@ -40,8 +40,14 @@ gem 'pry'
 # .env gem for storing api keys in development
 gem 'dotenv-rails', :groups => [:development, :test]
 
+group :production do
 # .env gem for storing api keys in production
-gem 'dotenv-deployment', group: :production
+gem 'dotenv-deployment'
+
+# postgresql gem for production on heroku
+gem 'pg'
+
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
