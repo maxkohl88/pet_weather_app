@@ -1,0 +1,85 @@
+.pet-index-container {
+  width: 100%;
+  height: 1000px;
+  background: url("homepageimage.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 2em;
+  font-family: 'Josefin Sans', sans-serif;
+
+  .header-container {
+    $header-radius: 1.2em;
+    text-align: center;
+    background-color: rgba(60, 172, 224, 0.59);
+    width: 50%;
+    padding: 0.02em;
+    margin: 0 auto;
+    color: white;
+    moz-border-radius: $header-radius;
+    webkit-border-radius: $header-radius;
+    border-radius: $header-radius;
+
+    h1 {
+      font-size: 3em;
+      font-style: italic;
+    }
+  }
+
+  .table-container {
+
+    table {
+      $table-radius: 1em;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 2em;
+      border-spacing: 1.2em;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      background-color: rgba(60, 172, 224, 0.59);
+      moz-border-radius: $table-radius;
+      webkit-border-radius: $table-radius;
+      border-radius: $table-radius;
+
+      .table-headers {
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 1.3em;
+      }
+
+      .pet-row {
+
+        form {
+          width: 4em;
+          height: 3em;
+          margin-right: 1.5em;
+          margin-top: 0.5em;
+
+          .umbrella-button {
+            $button-blue: rgba(0, 137, 190, 0.77);
+            $border-radius: 1em;
+            width: 6em;
+            height: 2em;
+            margin: 0 auto;
+            font-size: 1em;
+            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            border: 0.2em solid white;
+            moz-border-radius: $border-radius;
+            webkit-border-radius: $border-radius;
+            border-radius: $border-radius;
+            outline: none;
+            transition: all 0.2s ease;
+          }
+
+          .umbrella-button:hover {
+            background-color: white;
+            color: rgba(60, 172, 224, 0.8);
+            width: 6.5em;
+            height: 2.2em;
+          }
+        }
+      }
+    }
+  }
+}

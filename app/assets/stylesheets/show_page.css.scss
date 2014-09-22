@@ -1,0 +1,41 @@
+.pet-show-container {
+  text-align: center;
+  height: 1000px;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 3em;
+
+  h2 {
+    margin: 0 auto;
+    font-size: 2em;
+  }
+
+  .pet-image {
+    margin-top: 3em;
+    background-color: rgba(60, 172, 224, 0.59);
+    padding: 0.5em;
+    .pet-pic {
+      $pet-border: 2em;
+      height: auto;
+      width: 20%;
+      border: 0.5em solid white;
+      webkit-border-radius: $pet-border;
+      moz-border-radius: $pet-border;
+      border-radius: $pet-border;
+    }
+  }
+
+  .description {
+    margin-top: 1.2em;
+    font-size: 1.5em;
+
+    .location {
+      text-decoration: underline;
+    }
+  }
+
+  .pet-umbrella-statement {
+    margin-top: 1.2em;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}

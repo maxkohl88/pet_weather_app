@@ -22,9 +22,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 # use haml instead of erb
 gem 'haml-rails'
 
@@ -40,12 +37,19 @@ gem 'pry'
 # .env gem for storing api keys in development
 gem 'dotenv-rails', :groups => [:development, :test]
 
+group :development do 
+  gem 'spring'
+  gem 'sqlite3'
+end
+
 group :production do
 # .env gem for storing api keys in production
 gem 'dotenv-deployment'
 
 # postgresql gem for production on heroku
 gem 'pg'
+
+gem 'rails_12factor'
 
 end
 

@@ -2,14 +2,15 @@
   %h2 
     Hello human, my name is
     = @pet["name"]
+  .pet-image
+    =image_tag @pet["image_url"], class: 'pet-pic'
   .description
     I am a
     = @pet["species"]
     of the
     = @pet["breed"]
     clan. I live in
-    = @pet["location"]
+    %strong.location
+      = @pet["location"]
   .pet-umbrella-statement
     = @umbrella_statement
-  .pet-image
-    =image_tag @pet["image_url"]
