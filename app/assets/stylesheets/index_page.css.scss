@@ -3,22 +3,24 @@
   height: 1000px;
   background: url("homepageimage.jpg") no-repeat center;
   background-size: cover;
-  padding-top: 4em;
+  padding-top: 2em;
+  font-family: 'Josefin Sans', sans-serif;
 
   .header-container {
+    $header-radius: 1.2em;
     text-align: center;
+    background-color: rgba(60, 172, 224, 0.59);
+    width: 50%;
+    padding: 0.02em;
+    margin: 0 auto;
+    color: white;
+    moz-border-radius: $header-radius;
+    webkit-border-radius: $header-radius;
+    border-radius: $header-radius;
 
     h1 {
-      $header-radius: 1em;
-      margin: 0 auto;
-      background-color: rgba(60, 172, 224, 0.59);
-      width: 50%;
-      color: white;
       font-size: 3em;
       font-style: italic;
-      moz-border-radius: $header-radius;
-      webkit-border-radius: $header-radius;
-      border-radius: $header-radius;
     }
   }
 
