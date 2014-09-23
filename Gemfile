@@ -40,17 +40,15 @@ gem 'dotenv-rails', :groups => [:development, :test]
 group :development do 
   gem 'spring'
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :production do
-# .env gem for storing api keys in production
-gem 'dotenv-deployment'
-
-# postgresql gem for production on heroku
-gem 'pg'
-
-gem 'rails_12factor'
-
+  # .env gem for storing api keys in production
+  gem 'dotenv-deployment'
+  # postgresql gem for production on heroku
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
