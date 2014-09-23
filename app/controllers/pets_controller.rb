@@ -12,6 +12,19 @@ class PetsController < ApplicationController
     # make a request to the pet-shelter-api for an individual pet
     @pet = Requests::Pet_API.get_pet(pet_id).body
 
+    pet_location = Geocoder.search("#{@pet["latitude"].to_f}, #{@pet["longitude"].to_f}")
+
+    pet_city = pet_location.first.data["address_components"][3]["short_name"]
+    pet_state = pet_location.first.data["address_components"][5]["short_name"]
+
+    binding.pry
+
+    class << @pet 
+      attr_accessor :address
+    end
+
+    @pet.address = "#{pet_city}, #{pet_state}"
+
     # make a request to the Forecast.io API for the pet's weather information
     current_weather = Requests::Forecast_API.pet_forecast(@pet).body["currently"]
 
