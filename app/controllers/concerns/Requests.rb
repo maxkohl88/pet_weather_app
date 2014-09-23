@@ -3,7 +3,7 @@ module Requests
   class Pet_API
 
     def self.all_pets
-      APICache.get('get_all_pets', cache: 600) do
+      APICache.get('get_all_pets') do
         Unirest.get("http://maxk-pet-api.herokuapp.com/pets")
       end
     end
